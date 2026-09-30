@@ -11,14 +11,18 @@ sys.path.insert(0, INGEST_DIR)
 
 from ingest import load_documents
 
-docs = load_documents("../../data/manual.pdf")
-
 CHUNK_SIZE = 200
 CHUNK_OVERLAP = 50
 
-def prepare_chucks(path):
+def prepare_chunks(path):
 
     docs = load_documents(path)
+
+    print(docs[0].metadata)
+
+    print(docs[147].page_content)
+    print(f"page: {docs[147].metadata['page_no']}")
+    print('---')
 
     splitter = RecursiveCharacterTextSplitter(
         chunk_size = CHUNK_SIZE,
@@ -38,9 +42,9 @@ def prepare_chucks(path):
 
 if __name__ == "__main__":
 
-    chunks = prepare_chucks("../../data/manual.pdf")
+    chunks = prepare_chunks("../../data/manual.pdf")
 
-    for chunk in chunks[:5]:
+    for chunk in chunks[-2:]:
         print(chunk.page_content)
         print(chunk.metadata["chunk_id"], f": 총 {len(chunk.page_content)}자")
         print("---")

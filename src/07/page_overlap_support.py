@@ -76,6 +76,6 @@ documents = load_pdf_with_perfect_overlap_and_metadata(pdf_file, chunk_size=1000
 # 결과 확인
 print(f"생성된 총 청크 개수: {len(documents)}")
 print("\n=== 오버랩 경계면 청크 및 메타데이터 확인 ===")
-for i, d in enumerate(documents[:3]):
+for i, d in enumerate(documents[-2:]):
     print(f"[{i+1}번째 청크] 출처 페이지: {d.metadata['pages']}쪽 / 표 포함 여부: {d.metadata['has_table']}")
     print(d.page_content[:200] + "...\n" + "-"*50)
