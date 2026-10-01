@@ -29,5 +29,17 @@ def compare(question):
     print("근거:", len(documents), "개")
     print("-" * 60)    
 
+    for name, prompt in PROMPTS.items():
+        chain = prompt | llm | StrOutputParser()
+        answer = chain.invoke({
+            "context": context,
+            "question": question
+        })
+        print()
+        print(f"[{name}]")
+        print(answer)
+
+        
+
 if __name__ == "__main__":
     compare("환불 신청 방법과 수수료를 알려주세요")
