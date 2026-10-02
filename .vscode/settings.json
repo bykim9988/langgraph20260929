@@ -1,0 +1,8 @@
+{
+    "python.analysis.extraPaths": [
+        "./src/10",
+        "./src/13",
+        "./src/18",
+        "./src/19"
+    ]
+}
