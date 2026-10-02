@@ -33,7 +33,7 @@ load_dotenv()
 import config
 
 # 벡터 저장소를 가져오는 함수를 불러옵니다.
-from rag_app.indexer import get_store
+from rag_app_15.indexer import get_store
 
 
 # ==================================================

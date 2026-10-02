@@ -27,10 +27,10 @@ sys.path.insert(0, SRC_DIR)
 warnings.filterwarnings("ignore")
 
 # 프로젝트의 설정값을 불러옵니다.
-import config
+import config   # ..\13의 config.py
 
 # 벡터 저장소를 불러오는 함수를 가져옵니다.
-from rag_app.indexer import get_store
+from rag_app_15.indexer import get_store
 
 
 # ==================================================

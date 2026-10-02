@@ -12,9 +12,6 @@ from dotenv import load_dotenv
 from langchain_openai import ChatOpenAI
 from langchain_core.output_parsers import StrOutputParser
 
-import config
-
-
 # ------------------------------------------------------------
 # 13차시에 만든 prompts.py를 사용하기 위해 경로를 추가합니다.
 # ------------------------------------------------------------
@@ -23,6 +20,7 @@ PROMPT_DIR = os.path.join(CURRENT_DIR, "..", "13")
 
 sys.path.insert(0, PROMPT_DIR)
 
+import config
 from prompts import PROMPTS
 
 

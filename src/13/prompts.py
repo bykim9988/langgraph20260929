@@ -58,7 +58,7 @@ RETRY_PROMPT = ChatPromptTemplate.from_template(
     "{question}"
 )
 
-# PROMPTS["retry"] = RETRY_PROMPT
+PROMPTS["retry"] = RETRY_PROMPT
 
 
 # 26차시에 추가

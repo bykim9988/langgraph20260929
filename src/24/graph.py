@@ -28,7 +28,7 @@ from graph_state import RAGState
 # 질문을 초기 State 형태로 바꾸는 함수입니다.
 from graph_state2 import make_initial_state
 
-# 24차시에서 만든 검색 노드입니다.
+# 24차시에서 만든 검색 노드입니다. --> 업그레이드된 retrtiever로. 
 from retriever import retriever_node
 
 # 답변을 생성하는 노드입니다.
@@ -58,7 +58,7 @@ def build_graph():
     graph = StateGraph(RAGState)
 
     # 검색 노드를 등록합니다.
-    graph.add_node("retrieve", retriever_node)
+    graph.add_node("retrieve", retriever_node)  #  노드명은 바꾸지 않음 (구조 유지)
 
     # 답변 생성 노드를 등록합니다.
     graph.add_node("generate", generate_node)

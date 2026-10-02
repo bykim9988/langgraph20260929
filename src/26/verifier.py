@@ -298,3 +298,5 @@ if __name__ == "__main__":
         print(f"[{test_case['name']}]")
         print(f"  판정: {result['grade']}")
         print(f"  이유: {result['reason'][:70]}")
+
+    
